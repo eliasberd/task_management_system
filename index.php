@@ -15,7 +15,7 @@ include("include/header.php");
 </head>
 <body>
     <div class = "main_div">
-        <a class="btn btn-primary mb-3" href="createForm.php" name = "createBtn">Add new task</a>
+        <a class="btn btn-primary mb-3" href= "forms/createForm.php" name = "createBtn">Add new task</a>
         <table class = "table table-striped">
             <tr>
                 <th>Title</th>
@@ -31,7 +31,7 @@ include("include/header.php");
                 <td>High</td> 
                 <td>11/10/2024</td>
                 <td>
-                    <a class = "btn btn-warning" href = "updateForm.php"  name = "updateBtn">Update</a>
+                    <a class = "btn btn-warning" href = "forms/updateForm.php"  name = "updateBtn">Update</a>
                     <button type="submit" class = "btn btn-danger" name = "deleteBtn">Delete</button>
                 </td>
             </tr>

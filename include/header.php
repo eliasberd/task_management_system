@@ -14,8 +14,7 @@
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="index.php" class="nav-link active">Home</a></li>
-        
+        <li class="nav-item"><a href="../index.php" class="nav-link active">Home</a></li>
       </ul>
     </header>
   </div>

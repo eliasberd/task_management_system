@@ -1,5 +1,5 @@
 <?php 
-include("include/header.php");
+include("../include/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +12,9 @@ include("include/header.php");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <h2 class = "d-flex justify-content-center">Update Task</h2>
+    <h2 class = "d-flex justify-content-center">Add a new task</h2>
     <br>
-    <form action = "backend/process.php" method="post" class = "d-flex flex-column align-items-center">
+    <form action = "../backend/process.php" method="POST" class = "d-flex flex-column align-items-center">
         <div class = "form-outline mb-3">
             <label class = "form-label" for = "title">Title: </label>
             <input type="text" class = "form-control" id = "title" placeholder="Enter short title of task" name = "title" required>
@@ -27,19 +27,18 @@ include("include/header.php");
 
         <div class = "form-outline mb-3">
             <label class = "form-label" for = "dueDate">Due Date: </label>
-            <input type="text" id = "title" class = "form-control" placeholder="(eg.)" name = "dueDate" required>
+            <input type="text" id = "title" class = "form-control" placeholder="(eg.2024-02-26)" name = "dueDate" required>
         </div>
 
         <label for="cars">Priority:</label>
         <select name="priority" id="priority">
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
             <option value="High">High</option>
         </select>
         <br><br>
 
-        <button class="btn btn-primary" type = "submit" name = "updateTask">Update Task</button>
-
+        <button class="btn btn-primary" type = "submit" name = "submitTask">Submit</button>
     </form>
     
 </body>
