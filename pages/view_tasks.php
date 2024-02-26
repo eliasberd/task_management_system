@@ -1,6 +1,6 @@
 <?php 
 
-include("include/header.php");
+include("../include/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -8,15 +8,15 @@ include("include/header.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>   
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
     <title>Task Management System</title>
 </head>
 <body>
-    <div class = "main_div">
+    <div class = "main-div">
         <a class="btn btn-primary mb-3" href="create_task.php" name = "createBtn">Add new task</a>
         <form action="backend/process.php" method="GET">
         <table class = "table table-striped">
@@ -29,7 +29,7 @@ include("include/header.php");
                 <th>Actions</th>
             </tr>
             <?php 
-                include("include/config.php");
+                include("../include/config.php");
                 $query = "SELECT * FROM tasks";
                 $result = mysqli_query($conn, $query);
                     if (mysqli_num_rows($result) > 0) {
@@ -54,6 +54,6 @@ include("include/header.php");
         </table>
         </form>
     </div>
-<?php include('include/footer.php')?>
+<?php include('../include/footer.php')?>
 </body>
 </html>

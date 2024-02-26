@@ -14,7 +14,7 @@ if(isset($_POST["submitTask"])){
     if($result){
         $_SESSION['status'] = "Task Created Sucessfully!";
         $_SESSION['status_code'] = "success";
-        header("Location: ../view_tasks.php");
+        header("Location: ../pages/view_tasks.php");
         exit();
     }
 }
@@ -28,7 +28,7 @@ if(isset($_POST["deleteTask"])){
     if($result){
         $_SESSION['status'] = "Task Deleted Successfully!";
         $_SESSION['status_code'] = "success";
-        header("Location: ../view_tasks.php");
+        header("Location: ../pages/view_tasks.php");
         exit();
     }
 }
@@ -46,7 +46,7 @@ if(isset($_POST["updateTask"])){
     if($result){
         $_SESSION['status'] = "Task Updated Successfully!";
         $_SESSION['status_code'] = "success";
-        header("Location: ../view_tasks.php");
+        header("Location: ../pages/view_tasks.php");
         exit();
     }
 }

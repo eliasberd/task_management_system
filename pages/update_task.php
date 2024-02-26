@@ -1,5 +1,5 @@
 <?php 
-include("include/header.php");
+include("../include/header.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,22 +13,38 @@ include("include/header.php");
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-    <h2 class = "d-flex justify-content-center">Add a new task</h2>
+    <h2 class = "d-flex justify-content-center">Update task</h2>
     <br>
-    <form action = "backend/process.php" method="post" class = "d-flex flex-column align-items-center">
+    <form action = "../backend/process.php" method="POST" class = "d-flex flex-column align-items-center">
+    <?php
+    include("../include/config.php");
+    $_SESSION['task_id'] = $_GET['id'];
+    $task_id = $_SESSION['task_id'];
+    
+    $query = "SELECT * FROM tasks WHERE id = $task_id";
+    $result = mysqli_query($conn, $query);
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $title = $row['title'];
+                $description = $row['description'];
+                $priority = $row['priority'];
+                $due_date = $row['due_date'];
+    ?>
+   
         <div class = "form-outline mb-3">
             <label class = "form-label" for = "title">Title: </label>
-            <input type="text" class = "form-control" id = "title" placeholder="Enter short title of task" name = "title" required>
+            <input type="text" class = "form-control" id = "title" value="<?php echo $title?>" name = "title" required>
         </div>
 
         <div class = "form-outline mb-3">
             <label class = "form-label" for = "description">Description: </label>
-            <input type="text" id = "title" class="form-control" placeholder="Short Description" name = "description" required>
+            
+            <input type="text" id = "title" class="form-control" value="<?php echo $description?>" name = "description" required>
         </div>
 
         <div class = "form-outline mb-3">
             <label class = "form-label" for = "dueDate">Due Date: </label>
-            <input type="text" id = "title" class = "form-control" placeholder="(eg. 2024-02-30)" name = "dueDate" required>
+            <input type="text" id = "title" class = "form-control" value="<?php echo $due_date?>" name = "dueDate" required>
         </div>
 
         <label for="priority">Priority:</label>
@@ -39,8 +55,12 @@ include("include/header.php");
         </select>
         <br><br>
 
-        <button class="btn btn-primary" type = "submit" name = "submitTask">Submit</button>
+        <button class="btn btn-success" type = "submit" name = "updateTask">Update</button>
     </form>
-<?php include("include/footer.php")?>
+    <?php
+      }
+    }
+    include('../include/footer.php')
+    ?>
 </body>
 </html>

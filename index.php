@@ -14,12 +14,17 @@ include("include/header.php");
     <title>Task Management System</title>
 </head>
 <body>
-    <div>
-        <form action="">
-        WELCOME
-        <a href="view_tasks.php">READ</a>
-        </form>
+    <div class = "d-flex justify-content-center mt-6">
+        <div class= "main-div" style="margin-top: 200px;">
+            <h1>Welcome to Tas✓!</h1>
+            <br>
+            <a class = "btn btn-primary btn-lg" href="pages/view_tasks.php">Manage and View your tasks now!</a>
+        </div>
+        <div style="margin-top: 150px; margin-left: 100px;">
+            <img src="img/unnamed.png" alt="Task">
+        </div>
     </div>
+    
     
 </body>
 </html>
