@@ -30,7 +30,7 @@ include("include/header.php");
             <input type="text" id = "title" class = "form-control" placeholder="(eg.)" name = "dueDate" required>
         </div>
 
-        <label for="cars">Priotity:</label>
+        <label for="cars">Priority:</label>
         <select name="priotity" id="priority">
             <option value="low">Low</option>
             <option value="medium">Medium</option>
@@ -39,7 +39,6 @@ include("include/header.php");
         <br><br>
 
         <button class="btn btn-primary" type = "submit" name = "submitTask">Submit</button>
-
     </form>
     
 </body>

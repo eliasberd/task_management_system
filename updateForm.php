@@ -30,8 +30,8 @@ include("include/header.php");
             <input type="text" id = "title" class = "form-control" placeholder="(eg.)" name = "dueDate" required>
         </div>
 
-        <label for="cars">Priotity:</label>
-        <select name="priotity" id="priority">
+        <label for="cars">Priority:</label>
+        <select name="priority" id="priority">
             <option value="low">Low</option>
             <option value="medium">Medium</option>
             <option value="High">High</option>
