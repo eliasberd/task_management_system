@@ -14,30 +14,11 @@ include("include/header.php");
     <title>Task Management System</title>
 </head>
 <body>
-    <div class = "main_div">
-        <a class="btn btn-primary mb-3" href="createForm.php" name = "createBtn">Add new task</a>
-        <table class = "table table-striped">
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Priority</th>
-                <th>Due Date</th>
-                <th>Actions</th>
-            </tr>
-
-            <tr>
-                <td>Study</td>
-                <td>Study for exam this Monday</td>
-                <td>High</td> 
-                <td>11/10/2024</td>
-                <td>
-                    <a class = "btn btn-warning" href = "updateForm.php"  name = "updateBtn">Update</a>
-                    <button type="submit" class = "btn btn-danger" name = "deleteBtn">Delete</button>
-                </td>
-            </tr>
-
-            
-        </table>
+    <div>
+        <form action="">
+        WELCOME
+        <a href="view_tasks.php">READ</a>
+        </form>
     </div>
     
 </body>
