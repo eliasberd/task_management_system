@@ -15,6 +15,7 @@ include("include/header.php");
 </head>
 <body>
     <div class = "main_div">
+        <a class="btn btn-primary mb-3" href="createForm.php" name = "createBtn">Add new task</a>
         <table class = "table table-striped">
             <tr>
                 <th>Title</th>
@@ -37,8 +38,6 @@ include("include/header.php");
 
             
         </table>
-        <a class="btn btn-primary" href="createForm.php" name = "createBtn">Create</a>
-
     </div>
     
 </body>
